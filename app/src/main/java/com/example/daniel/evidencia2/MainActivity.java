@@ -10,7 +10,6 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
-import com.example.daniel.evidencia2.usuario;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -26,8 +25,8 @@ public class MainActivity extends AppCompatActivity {
 
         usuario a = new usuario();
         a.nombre = ((EditText)findViewById(R.id.nombretext)).getText().toString();
-        a.primapellido = ((EditText)findViewById(R.id.apellidotext)).getText().toString();
-        a.segapellido = ((EditText)findViewById(R.id.apellido2text)).getText().toString();
+        a.primerapellido = ((EditText)findViewById(R.id.apellidotext)).getText().toString();
+        a.segundoapellido = ((EditText)findViewById(R.id.apellido2text)).getText().toString();
         a.fecha = ((EditText)findViewById(R.id.fecha2)).getText().toString();
         a.entidad = ((Spinner)findViewById(R.id.spinner2)).getSelectedItem().toString();
         a.sexo = ((RadioButton)findViewById(((RadioGroup)findViewById(R.id.radioGroup2)).getCheckedRadioButtonId())).getText().toString();

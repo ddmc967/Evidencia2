@@ -13,8 +13,8 @@ import java.util.ArrayList;
 public class usuario implements Parcelable {
     private static final Object SaveInArgsDB = ;
     private static final Object ContentValues = ;
-    public String primapellido;
-    public String segapellido;
+    public String primerapellido;
+    public String segundoapellido;
     public String nombre;
     public String sexo;
     public String sexo2;
@@ -23,8 +23,8 @@ public class usuario implements Parcelable {
     private String path;
 
     public usuario() {
-        this.primapellido = "";
-        this.segapellido = "";
+        this.primerapellido = "";
+        this.segundoapellido = "";
         this.nombre = "";
         this.sexo = "";
         this.sexo2 = "";
@@ -42,8 +42,8 @@ public class usuario implements Parcelable {
 
     @Override
     public void writeToParcel(Parcel parcel, int i) {
-        parcel.writeString(primapellido);
-        parcel.writeString(segapellido);
+        parcel.writeString(primerapellido);
+        parcel.writeString(segundoapellido);
         parcel.writeString(nombre);
         parcel.writeString(sexo);
         parcel.writeString(sexo2);
@@ -65,8 +65,8 @@ public class usuario implements Parcelable {
     };
 
     private usuario(Parcel in) {
-        this.primapellido = in.readString();
-        this.segapellido = in.readString();
+        this.primerapellido = in.readString();
+        this.segundoapellido = in.readString();
         this.nombre = in.readString();
         this.sexo = in.readString();
         this.sexo2 = in.readString();
@@ -124,8 +124,8 @@ public class usuario implements Parcelable {
 
             ContentValues = new ContentValues();
             values.put(UsuarioContract.usuarioEntry.COLUMNA_NOMBRE, nombre);
-            values.put(UsuarioContract.usuarioEntry.COLUMNA_APELLIDOPAT,primapellido );
-            values.put(UsuarioContract.usuarioEntry.COLUMNA_APELLIDOMAT, segapellido);
+            values.put(UsuarioContract.usuarioEntry.COLUMNA_APELLIDOPAT, primerapellido);
+            values.put(UsuarioContract.usuarioEntry.COLUMNA_APELLIDOMAT, segundoapellido);
             values.put(UsuarioContract.usuarioEntry.COLUMNA_GENERO, sexo);
             values.put(UsuarioContract.usuarioEntry.COLUMNA_ESTADO, entidad);
             values.put(UsuarioContract.usuarioEntry.COLUMNA_YEAR, fecha);

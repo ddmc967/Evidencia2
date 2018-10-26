@@ -16,8 +16,8 @@ public class Main2Activity extends AppCompatActivity {
         Intent intent = getIntent();
         usuario user =intent.getParcelableExtra("user");
 
-        ((TextView)findViewById(R.id.texto)).setText(user.primapellido);
-        ((TextView)findViewById(R.id.texto1)).setText(user.segapellido);
+        ((TextView)findViewById(R.id.texto)).setText(user.primerapellido);
+        ((TextView)findViewById(R.id.texto1)).setText(user.segundoapellido);
         ((TextView)findViewById(R.id.texto2)).setText(user.nombre);
         ((TextView)findViewById(R.id.texto3)).setText(user.sexo);
         ((TextView)findViewById(R.id.texto4)).setText(user.sexo2);
